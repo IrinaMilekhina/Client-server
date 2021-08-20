@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  server1:
+    build: server/
+    environment:
+      ID: "${ID_1}"
+
+    command: python ./server.py
+    ports:
+      - 15555:15555
+
+  server2:
+    build: server/
+    environment:
+      ID: "${ID_2}"
+
+    command: python ./server.py
+    ports:
+      - 15556:15555
